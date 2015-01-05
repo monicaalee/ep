@@ -11,6 +11,513 @@
 
 </head>
 
+<style type="text/css">
+
+body {
+font-family: 'Open Sans', sans-serif;
+height: 100%;
+margin: 0px;
+overflow: hidden;
+padding: 0px;
+text-align: left;
+user-select: none;
+width: 100%;
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+}
+
+body a {
+text-decoration: none;
+}
+
+::-moz-selection {
+color: black;
+background: transparent;
+}
+
+::selection {
+color: black;
+background: transparent;
+}
+
+.header {
+background: transparent;
+font-size: 17px;
+float: left;
+height: 70px;
+left: 0px;
+margin: 0px;
+padding: 7px;
+position: relative;
+width: 100%;
+}
+
+.header a {
+color: black;
+}
+
+.header a:hover {
+color: green;
+font-weight: bold;
+}
+
+.header img {
+height: 35px;
+left: 0px;
+}
+
+.question {
+font-size: 27px;
+line-height: 0px;
+margin-top: 200px;
+}
+
+.subquestion {
+color: dimgray;
+font-size: 17px;
+line-height: 0px;
+}
+
+#circles {
+margin: 100px auto auto auto;
+}
+
+#circles a {
+color: white;
+font-size: 13px;
+letter-spacing: 3px;
+}
+
+#circles a:hover {
+color: yellowgreen;
+font-weight: bold;
+}
+
+.circle {
+background-color: transparent;
+border: 3px solid white;
+border-radius: 100%;
+color: greenyellow;
+height: 85px;
+line-height: 8px;
+opacity: 0.85;
+text-align: center;
+width: 85px;
+}
+
+.circle:hover {
+background-color: yellowgreen;
+border: 3px solid yellowgreen;
+}
+
+.circ {
+background-color: transparent;
+display: ;
+height: 85px;
+opacity: 0.85;
+width: 50px;
+}
+
+#one {
+background-image: url('https://github.com/monicaalee/ep/raw/gh-pages/images/sfwa.jpg');
+background-repeat: no-repeat;
+background-size: 100% 100%;
+color: black;
+height: 100%;
+overflow: hidden;
+position: absolute;
+text-align: center;
+width: 100%;
+}
+
+.questions {
+color: dimgray;
+font-size: 20px;
+font-weight: bold;
+line-height: 0px;
+margin: 0px auto 0px auto;
+opacity: 0.85;
+padding: 5px 10px 5px 10px;
+text-align: center;
+width: 500px;
+}
+
+#water {
+background-image: url('https://raw.githubusercontent.com/monicaalee/ep/gh-pages/images/sfw.jpg');
+background-repeat: no-repeat;
+background-size: 100% 100%;
+height: 100%;
+overflow: hidden;
+position: absolute;
+top: 100%;
+transition-timing-function: ease;
+width: 100%;
+}
+
+#water .wr {
+height: 100px;
+width: 100%;
+}
+
+#water .wt {
+margin: 30px auto auto auto;
+}
+
+#water .box {
+background: white;
+border: 3px solid skyblue;
+border-radius: 100%;
+font-size: 17px;
+height: 100px;
+margin: 10px;
+opacity: 0.85;
+overflow: hidden;
+padding: 3px;
+text-align: center;
+width: 100px;
+}
+
+#water .box .show {
+display: none;
+}
+
+#water .box:hover .show {
+color: white;
+display: inline;
+}
+
+#water .box:hover .hide {
+display: none;
+}
+
+#water .box:hover {
+background: skyblue;
+border-radius: 100%;
+color: white;
+opacity: 0.95;
+}
+
+#water .boxg {
+background: white;
+border: 3px solid seagreen;
+border-radius: 100%;
+height: 100px;
+margin: 10px;
+opacity: 0.85;
+overflow: hidden;
+padding: 3px;
+text-align: center;
+width: 100px;
+}
+
+#water .boxg .show {
+display: none;
+}
+
+#water .boxg:hover .show {
+color: white;
+display: inline;
+}
+
+#water .boxg:hover .hide {
+display: none;
+}
+
+#water .boxg:hover {
+background: seagreen;
+border-radius: 100%;
+color: white;
+font-weight: bold;
+opacity: 0.95;
+}
+
+#water .boxr {
+background: white;
+border: 3px solid darkred;
+border-radius: 100%;
+height: 100px;
+margin: 10px;
+opacity: 0.85;
+overflow: hidden;
+padding: 3px;
+text-align: center;
+width: 100px;
+}
+
+#water .boxr .show {
+display: none;
+}
+
+#water .boxr:hover .show {
+color: white;
+display: inline;
+}
+
+#water .boxr:hover .hide {
+display: none;
+}
+
+#water .boxr:hover {
+background: darkred;
+border-radius: 100%;
+color: white;
+font-weight: bold;
+opacity: 0.95;
+}
+
+.bo {
+background: transparent;
+height: 0px;
+margin: 0px;
+overflow: hidden;
+padding: 5px;
+text-align: center;
+width: 0px;
+}
+
+#water .boxs {
+background: white;
+border: 3px solid steelblue;
+height: 100px;
+margin: 10px;
+opacity: 0.85;
+overflow: hidden;
+padding: 3px;
+text-align: center;
+width: 200px;
+}
+
+#water .boxs .show {
+display: none;
+}
+
+#water .boxs:hover .show {
+color: white;
+display: inline;
+}
+
+#water .boxs:hover .hide {
+display: none;
+}
+
+#water .boxs:hover {
+background: steelblue;
+color: white;
+opacity: 0.95;
+}
+
+#watertwo {
+background-image: url('https://raw.githubusercontent.com/monicaalee/ep/gh-pages/images/wa.jpg');
+background-repeat: no-repeat;
+background-size: 100% 100%;
+height: 100%;
+overflow: hidden;
+position: absolute;
+line-height: 17px;
+top: 200%;
+transition-timing-function: ease;
+width: 100%;
+}
+
+.header2 {
+background: transparent;
+color: white;
+font-size: 17px;
+float: left;
+height: 70px;
+left: 0px;
+margin: 0px;
+padding: 7px;
+position: relative;
+width: 100%;
+}
+
+.header2 a {
+color: white;
+}
+
+.header2 a:hover {
+color: lightgreen;
+font-weight: bold;
+}
+
+.header2 img {
+height: 35px;
+left: 0px;
+}
+
+.questions2 {
+color: black;
+font-size: 20px;
+line-height: 24px;
+margin: auto;
+opacity: 1;
+padding: 5px 10px 5px 10px;
+text-align: center;
+width: 500px;
+}
+
+#watertwo .o {
+background: white;
+border: 3px solid skyblue;
+border-radius: 100%;
+height: 80px;
+margin: 10px;
+opacity: 0.85;
+overflow: hidden;
+padding: 3px;
+text-align: center;
+width: 80px;
+}
+
+#watertwo .o .show {
+display: none;
+}
+
+#watertwo .o:hover .show {
+color: white;
+display: inline;
+}
+
+#watertwo .o:hover .hide {
+display: none;
+}
+
+#watertwo .o:hover {
+background: skyblue;
+border-radius: 100%;
+color: white;
+opacity: 0.95;
+}
+
+#watertwo .oo {
+background: white;
+border: 3px solid seagreen;
+border-radius: 100%;
+height: 80px;
+margin: 10px;
+opacity: 0.85;
+overflow: hidden;
+padding: 3px;
+text-align: center;
+width: 80px;
+}
+
+#watertwo .oo .show {
+display: none;
+}
+
+#watertwo .oo:hover .show {
+color: white;
+display: inline;
+}
+
+#watertwo .oo:hover .hide {
+display: none;
+}
+
+#watertwo .oo:hover {
+background: seagreen;
+border-radius: 100%;
+color: white;
+opacity: 0.95;
+}
+
+#watertwo .ooo {
+background: white;
+border: 3px solid darkred;
+border-radius: 100%;
+height: 80px;
+margin: 10px;
+opacity: 0.85;
+overflow: hidden;
+padding: 3px;
+text-align: center;
+width: 80px;
+}
+
+#watertwo .ooo .show {
+display: none;
+}
+
+#watertwo .ooo:hover .show {
+color: white;
+display: inline;
+}
+
+#watertwo .ooo:hover .hide {
+display: none;
+}
+
+#watertwo .ooo:hover {
+background: darkred;
+border-radius: 100%;
+color: white;
+opacity: 0.95;
+}
+
+.questions {
+color: white;
+font-size: 21px;
+font-weight: bold;
+line-height: 0px;
+margin: 0px auto 0px auto;
+opacity: 0.85;
+padding: 5px 10px 5px 10px;
+text-align: center;
+text-shadow: 0px 0px 1px black;
+width: 500px;
+}
+
+#watertwo .boxs {
+background: white;
+border: 3px solid steelblue;
+height: 100px;
+margin: 10px;
+opacity: 0.85;
+overflow: hidden;
+padding: 3px;
+text-align: center;
+width: 200px;
+}
+
+#watertwo .boxs .show {
+display: none;
+}
+
+#watertwo .boxs:hover .show {
+color: white;
+display: inline;
+}
+
+#watertwo .boxs:hover .hide {
+display: none;
+}
+
+#watertwo .boxs:hover {
+background: steelblue;
+color: white;
+opacity: 0.95;
+}
+
+#waterthree {
+background-image: url('https://raw.githubusercontent.com/monicaalee/ep/gh-pages/images/w.jpg');
+background-repeat: no-repeat;
+background-size: 100% 100%;
+height: 100%;
+overflow: hidden;
+position: absolute;
+line-height: 17px;
+top: 300%;
+transition-timing-function: ease;
+width: 100%;
+}
+
+</style>
+
 <body>
 
 <!-- section one -->
