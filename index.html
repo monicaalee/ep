@@ -70,6 +70,19 @@ height: 35px;
 left: 0px;
 }
 
+.questions {
+color: black;
+font-size: 21px;
+font-weight: bold;
+line-height: 0px;
+margin: 10px auto 0px auto;
+opacity: 0.85;
+padding: 5px 10px 5px 10px;
+text-align: center;
+text-shadow: 0 0 3px white;
+width: 500px;
+}
+
 .question {
 font-size: 27px;
 line-height: 0px;
@@ -410,19 +423,6 @@ color: white;
 opacity: 1;
 }
 
-.questions {
-color: black;
-font-size: 21px;
-font-weight: bold;
-line-height: 0px;
-margin: 10px auto 0px auto;
-opacity: 0.85;
-padding: 5px 10px 5px 10px;
-text-align: center;
-text-shadow: 0 0 3px white;
-width: 500px;
-}
-
 #watertwo .boxs {
 background: white;
 border: 3px solid steelblue;
@@ -465,6 +465,136 @@ line-height: 17px;
 top: 300%;
 transition-timing-function: ease;
 width: 100%;
+}
+
+#waterthree .o {
+background: white;
+border: 3px solid skyblue;
+border-radius: 100%;
+height: 80px;
+margin: 10px;
+opacity: 0.85;
+overflow: hidden;
+padding: 3px;
+text-align: center;
+width: 80px;
+}
+
+#waterthree .o .show {
+display: none;
+}
+
+#waterthree .o:hover .show {
+color: white;
+display: inline;
+}
+
+#waterthree .o:hover .hide {
+display: none;
+}
+
+#waterthree .o:hover {
+background: skyblue;
+border-radius: 100%;
+color: white;
+opacity: 1;
+}
+
+#waterthree .oo {
+background: white;
+border: 3px solid seagreen;
+border-radius: 100%;
+height: 80px;
+margin: 10px;
+opacity: 0.85;
+overflow: hidden;
+padding: 3px;
+text-align: center;
+width: 80px;
+}
+
+#waterthree .oo .show {
+display: none;
+}
+
+#waterthree .oo:hover .show {
+color: white;
+display: inline;
+}
+
+#waterthree .oo:hover .hide {
+display: none;
+}
+
+#waterthree .oo:hover {
+background: seagreen;
+border-radius: 100%;
+color: white;
+opacity: 1;
+}
+
+#waterthree .ooo {
+background: white;
+border: 3px solid darkred;
+border-radius: 100%;
+height: 80px;
+margin: 10px;
+opacity: 0.85;
+overflow: hidden;
+padding: 3px;
+text-align: center;
+width: 80px;
+}
+
+#waterthree .ooo .show {
+display: none;
+}
+
+#waterthree .ooo:hover .show {
+color: white;
+display: inline;
+}
+
+#waterthree .ooo:hover .hide {
+display: none;
+}
+
+#waterthree .ooo:hover {
+background: darkred;
+border-radius: 100%;
+color: white;
+opacity: 1;
+}
+
+#waterthree .boxs {
+background: white;
+border: 3px solid steelblue;
+height: 100px;
+margin: 10px;
+opacity: 0.85;
+overflow: hidden;
+padding: 3px;
+text-align: center;
+width: 200px;
+}
+
+#waterthree .boxs .show {
+display: none;
+}
+
+#waterthree .boxs:hover .show {
+color: white;
+display: inline;
+}
+
+#waterthree .boxs:hover .hide {
+display: none;
+}
+
+#waterthree .boxs:hover {
+background: steelblue;
+color: white;
+opacity: 1;
 }
 
 </style>
@@ -1126,7 +1256,48 @@ Try using less toilet paper!</p>
 </tr>
 </table>
 
+<br>
 
+<table>
+<th>
+<td>
+<div class="questions">
+How full do you fill your baths?
+</div>
+<br>
+</td>
+</th>
+<th>
+<td class="o">
+<p class="hide">
+n / a
+</p>
+<p class="show">
+0 gallons!
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="oo">
+<p class="hide">
+half full
+</p>
+<p class="show">
+25 gallons
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="ooo">
+<p class="hide">
+full bath
+</p>
+<p class="show">
+50 gallons
+</p>
+</td>
+</th>
+</table>
   
 </section>
 
