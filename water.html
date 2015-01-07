@@ -21,6 +21,7 @@
 body {
 background-image: url('https://raw.githubusercontent.com/monicaalee/ep/gh-pages/images/background.jpg');
 background-repeat: no-repeat;
+background-position: fixed;
 background-size: 100% 100%;
 font-family: 'Open Sans', sans-serif;
 margin: 0px;
@@ -34,6 +35,7 @@ user-select: none;
 -khtml-user-select: none;
 -moz-user-select: none;
 -ms-user-select: none;
+max-width: 100%;
 }
 
 body a {
@@ -93,24 +95,23 @@ width: 500px;
 }
 
 #water {
-height: 100%;
 overflow: hidden;
 position: absolute;
-top: 0%;
+top: 77px;
 transition-timing-function: ease;
 width: 100%;
 }
 
-#water .wr {
+.wr {
 height: 100px;
 width: 100%;
 }
 
-#water .wt {
+.wt {
 margin: 30px auto auto auto;
 }
 
-#water .box {
+.box {
 background: white;
 border: 3px solid skyblue;
 border-radius: 100%;
@@ -124,27 +125,27 @@ text-align: center;
 width: 100px;
 }
 
-#water .box .show {
+.box .show {
 display: none;
 }
 
-#water .box:hover .show {
+.box:hover .show {
 color: white;
 display: inline;
 }
 
-#water .box:hover .hide {
+.box:hover .hide {
 display: none;
 }
 
-#water .box:hover {
+.box:hover {
 background: skyblue;
 border-radius: 100%;
 color: white;
 opacity: 1;
 }
 
-#water .boxg {
+.boxg {
 background: white;
 border: 3px solid seagreen;
 border-radius: 100%;
@@ -157,20 +158,20 @@ text-align: center;
 width: 100px;
 }
 
-#water .boxg .show {
+.boxg .show {
 display: none;
 }
 
-#water .boxg:hover .show {
+.boxg:hover .show {
 color: white;
 display: inline;
 }
 
-#water .boxg:hover .hide {
+.boxg:hover .hide {
 display: none;
 }
 
-#water .boxg:hover {
+.boxg:hover {
 background: seagreen;
 border-radius: 100%;
 color: white;
@@ -178,7 +179,7 @@ font-weight: bold;
 opacity: 1;
 }
 
-#water .boxr {
+.boxr {
 background: white;
 border: 3px solid darkred;
 border-radius: 100%;
@@ -191,20 +192,20 @@ text-align: center;
 width: 100px;
 }
 
-#water .boxr .show {
+.boxr .show {
 display: none;
 }
 
-#water .boxr:hover .show {
+.boxr:hover .show {
 color: white;
 display: inline;
 }
 
-#water .boxr:hover .hide {
+.boxr:hover .hide {
 display: none;
 }
 
-#water .boxr:hover {
+.boxr:hover {
 background: darkred;
 border-radius: 100%;
 color: white;
@@ -222,7 +223,7 @@ text-align: center;
 width: 0px;
 }
 
-#water .boxs {
+.boxs {
 background: white;
 border: 3px solid black;
 height: 100px;
@@ -234,36 +235,26 @@ text-align: center;
 width: 200px;
 }
 
-#water .boxs .show {
+.boxs .show {
 display: none;
 }
 
-#water .boxs:hover .show {
+.boxs:hover .show {
 color: white;
 display: inline;
 }
 
-#water .boxs:hover .hide {
+.boxs:hover .hide {
 display: none;
 }
 
-#water .boxs:hover {
+.boxs:hover {
 background: steelblue;
 color: white;
 opacity: 1;
 }
 
-#watertwo {
-height: 100%;
-overflow: hidden;
-position: absolute;
-line-height: 17px;
-top: 100%;
-transition-timing-function: ease;
-width: 100%;
-}
-
-#watertwo .o {
+.o {
 background: white;
 border: 3px solid skyblue;
 border-radius: 100%;
@@ -276,27 +267,27 @@ text-align: center;
 width: 80px;
 }
 
-#watertwo .o .show {
+.o .show {
 display: none;
 }
 
-#watertwo .o:hover .show {
+.o:hover .show {
 color: white;
 display: inline;
 }
 
-#watertwo .o:hover .hide {
+.o:hover .hide {
 display: none;
 }
 
-#watertwo .o:hover {
+.o:hover {
 background: skyblue;
 border-radius: 100%;
 color: white;
 opacity: 1;
 }
 
-#watertwo .oo {
+.oo {
 background: white;
 border: 3px solid seagreen;
 border-radius: 100%;
@@ -309,27 +300,27 @@ text-align: center;
 width: 80px;
 }
 
-#watertwo .oo .show {
+.oo .show {
 display: none;
 }
 
-#watertwo .oo:hover .show {
+.oo:hover .show {
 color: white;
 display: inline;
 }
 
-#watertwo .oo:hover .hide {
+.oo:hover .hide {
 display: none;
 }
 
-#watertwo .oo:hover {
+.oo:hover {
 background: seagreen;
 border-radius: 100%;
 color: white;
 opacity: 1;
 }
 
-#watertwo .ooo {
+.ooo {
 background: white;
 border: 3px solid darkred;
 border-radius: 100%;
@@ -342,27 +333,27 @@ text-align: center;
 width: 80px;
 }
 
-#watertwo .ooo .show {
+.ooo .show {
 display: none;
 }
 
-#watertwo .ooo:hover .show {
+.ooo:hover .show {
 color: white;
 display: inline;
 }
 
-#watertwo .ooo:hover .hide {
+.ooo:hover .hide {
 display: none;
 }
 
-#watertwo .ooo:hover {
+.ooo:hover {
 background: darkred;
 border-radius: 100%;
 color: white;
 opacity: 1;
 }
 
-#watertwo .boxs {
+.boxs {
 background: white;
 border: 3px solid steelblue;
 height: 100px;
@@ -374,160 +365,20 @@ text-align: center;
 width: 200px;
 }
 
-#watertwo .boxs .show {
+.boxs .show {
 display: none;
 }
 
-#watertwo .boxs:hover .show {
+.boxs:hover .show {
 color: white;
 display: inline;
 }
 
-#watertwo .boxs:hover .hide {
+.boxs:hover .hide {
 display: none;
 }
 
-#watertwo .boxs:hover {
-background: steelblue;
-color: white;
-opacity: 1;
-}
-
-#waterthree {
-height: 100%;
-overflow: hidden;
-position: absolute;
-line-height: 17px;
-top: 200%;
-transition-timing-function: ease;
-width: 100%;
-}
-
-#waterthree .o {
-background: white;
-border: 3px solid skyblue;
-border-radius: 100%;
-height: 80px;
-margin: 10px;
-opacity: 0.85;
-overflow: hidden;
-padding: 3px;
-text-align: center;
-width: 80px;
-}
-
-#waterthree .o .show {
-display: none;
-}
-
-#waterthree .o:hover .show {
-color: white;
-display: inline;
-}
-
-#waterthree .o:hover .hide {
-display: none;
-}
-
-#waterthree .o:hover {
-background: skyblue;
-border-radius: 100%;
-color: white;
-opacity: 1;
-}
-
-#waterthree .oo {
-background: white;
-border: 3px solid seagreen;
-border-radius: 100%;
-height: 80px;
-margin: 10px;
-opacity: 0.85;
-overflow: hidden;
-padding: 3px;
-text-align: center;
-width: 80px;
-}
-
-#waterthree .oo .show {
-display: none;
-}
-
-#waterthree .oo:hover .show {
-color: white;
-display: inline;
-}
-
-#waterthree .oo:hover .hide {
-display: none;
-}
-
-#waterthree .oo:hover {
-background: seagreen;
-border-radius: 100%;
-color: white;
-opacity: 1;
-}
-
-#waterthree .ooo {
-background: white;
-border: 3px solid darkred;
-border-radius: 100%;
-height: 80px;
-margin: 10px;
-opacity: 0.85;
-overflow: hidden;
-padding: 3px;
-text-align: center;
-width: 80px;
-}
-
-#waterthree .ooo .show {
-display: none;
-}
-
-#waterthree .ooo:hover .show {
-color: white;
-display: inline;
-}
-
-#waterthree .ooo:hover .hide {
-display: none;
-}
-
-#waterthree .ooo:hover {
-background: darkred;
-border-radius: 100%;
-color: white;
-opacity: 1;
-}
-
-#waterthree .boxs {
-background: white;
-border: 3px solid steelblue;
-height: 100px;
-margin: 10px;
-opacity: 0.85;
-overflow: hidden;
-padding: 3px;
-text-align: center;
-width: 200px;
-}
-
-#waterthree .boxs .show {
-display: none;
-}
-
-#waterthree .boxs:hover .show {
-color: white;
-display: inline;
-}
-
-#waterthree .boxs:hover .hide {
-display: none;
-}
-
-#waterthree .boxs:hover {
+.boxs:hover {
 background: steelblue;
 color: white;
 opacity: 1;
@@ -810,7 +661,7 @@ Turn off the water when you shave so it doesn't just keep running.
 <tr class="wt">
 <br><br>
 <center>
-<a href="#watertwo">
+<a href="#water">
 <img height="30px" src="https://raw.githubusercontent.com/monicaalee/ep/gh-pages/images/down.png">
 </a>
 </center>
@@ -819,7 +670,7 @@ Turn off the water when you shave so it doesn't just keep running.
 </section>
 
 <!-- section three -->
-<section id="watertwo">
+<section id="water">
 <table class="header">
 <tr>
 <td>
@@ -1114,7 +965,7 @@ Try using less toilet paper!</p>
 <table>
 <br><br>
 <center>
-<a href="#waterthree">
+<a href="#water">
 <img height="30px" src="https://raw.githubusercontent.com/monicaalee/ep/gh-pages/images/down.png">
 </a>
 </center>
@@ -1124,7 +975,7 @@ Try using less toilet paper!</p>
 </section>
 
 <!-- section four -->
-<section id="waterthree">
+<section id="water">
 <table class="header">
 <tr>
 <td>
