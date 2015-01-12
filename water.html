@@ -21,6 +21,39 @@
 <script type="text/javascript" src="path_to/jquery.js"></script>
 <script type="text/javascript" src="path_to/jcalculator.min.js"></script>
 
+<!-- popups -->
+<script type="text/javascript" 
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script> 
+<script> 
+$(document).ready(function() { 
+// 
+$('a.poplight[href^=#]').click(function() { 
+var popID = $(this).attr('rel'); //Get Popup Name 
+var popURL = $(this).attr('href'); //Get Popup href to define size 
+var query= popURL.split('?'); 
+var dim= query[1].split('&'); 
+var popWidth = dim[0].split('=')[1]; //Gets the first query string value 
+$('#' + popID).fadeIn().css({ 'width': Number( popWidth ) }).prepend('<a href="#" class="close"><img src="https://31.media.tumblr.com/351314c54892e9bebbd2b6dabcaefcef/tumblr_inline_n3xpoxUgxH1qgm03k.png" class="close_btn" title="Close" alt="Close" /></a>'); 
+var popMargTop = ($('#' + popID).height() + 80) / 2; 
+var popMargLeft = ($('#' + popID).width() + 80) / 2; 
+//Apply Margin to Popup 
+$('#' + popID).css({ 
+'margin-top' : -popMargTop,
+'margin-left' : -popMargLeft 
+}); 
+$('body').append('<div id="popupback"></div>');
+$('#popupback').css({'filter' : 'alpha(opacity=80)'}).fadeIn(); //Fade in the fade layer - .css({'filter' : 'alpha(opacity=80)'}) 
+return false; 
+}); 
+$('a.close, #popupback').live('click', function() { 
+$('#popupback , .popup').fadeOut(function() { 
+$('#popupback, a.close').remove(); //fade them both out 
+}); 
+return false; 
+}); 
+}); 
+</script>
+
 <style type="text/css">
 
 body {
@@ -403,6 +436,164 @@ background: steelblue;
 color: white;
 opacity: 1;
 }
+
+/* popups */
+#popupback {
+display: none; /*--hidden by default--*/
+background: white;
+background-image: url('');
+background-size: 100% 100%;
+position: fixed; 
+left: 0px; 
+top: 0px;
+width: 100%; height: 100%;
+opacity: 0.5;
+z-index: 999999;
+}
+
+.popup {
+display: none; /*--hidden by default--*/
+background: white;
+background-image: url('');
+background-size: 100% 100%;
+max-height: 750px;
+overflow-y: auto;
+padding: 10px;
+color: black;
+text-align: center;
+font-size: 12px;
+position: fixed;
+line-height: 17px;
+top: 50%;
+left: 50%;
+border: 1px solid black;
+border-radius: 0px;
+z-index: 9999999;
+-webkit-animation: floor 1s;
+-moz-animation: floor 1s;
+-ms-animation: floor 1s;
+}
+
+.popup a {
+color: green;
+}
+
+.popup a:hover {
+color: black;
+text-decoration: underline;
+}
+
+img.close_btn {
+float: right;
+right: 0px;
+top: 0px;
+margin: 0px;
+position: absolute;
+z-index: 999999;
+height: 30px;
+width: 30px;
+display: none;
+}
+
+*html .popup {
+position: absolute;
+}
+
+@-webkit-keyframes floor {
+0% {
+opacity: 0;
+-webkit-transform: translateY(-50%);
+}
+25% {
+opacity: 0.3;
+}
+50% {
+opacity: 0.5;
+}
+75% {
+opacity: 0.7;
+}
+100% {
+opacity: 1;
+-webkit-transform: translateY(0%);
+}
+}
+
+@-moz-keyframes floor {
+0% {
+opacity: 0;
+-webkit-transform: translateY(-50%);
+}
+25% {
+opacity: 0.3;
+}
+50% {
+opacity: 0.5;
+}
+75% {
+opacity: 0.7;
+}
+100% {
+opacity: 1;
+-webkit-transform: translateY(0%);
+}
+}
+
+@-o-keyframes floor {
+0% {
+opacity: 0;
+-webkit-transform: translateY(-50%);
+}
+25% {
+opacity: 0.3;
+}
+50% {
+opacity: 0.5;
+}
+75% {
+opacity: 0.7;
+}
+100% {
+opacity: 1;
+-webkit-transform: translateY(0%);
+}
+}
+
+@keyframes floor {
+0% {
+opacity: 0;
+-webkit-transform: translateY(-50%);
+}
+25% {
+opacity: 0.3;
+}
+50% {
+opacity: 0.5;
+}
+75% {
+opacity: 0.7;
+}
+100% {
+opacity: 1;
+-webkit-transform: translateY(0%);
+}
+}
+
+#credit {
+bottom: 0px;
+opacity: 0.5;
+position: fixed;
+right: 0px;
+}
+
+#credit a {
+color: white;
+}
+
+#credit:hover {
+opacity: 1;
+}
+
 
 </style>
 
@@ -1279,5 +1470,38 @@ Turn off the water when you shave so it doesn't just keep running.
 <!-- section end -->
 </div>
 
+<!-- credit -->
+
+<div id="credit">
+<a href="#?w=400" rel="credits" class="poplight" title="credits">©</a>
+</div>
+
 </body>
+
+<div id="credits" class="popup">
+BACKGROUNF IMAGE:<br>
+<a href="https://www.flickr.com/photos/htakashi/10964624863/" target="_blank">  San Francisco over the sea </a>
+by
+<a href="https://www.flickr.com/photos/htakashi/" target="_blank"> Takashi Hososhima </a>
+<br><br>
+FONT:<br>
+<a href="http://www.google.com/fonts/specimen/Open+Sans" target="_blank"> Open Sans</a>
+by
+<a href="https://profiles.google.com/107777320916704234605/about" target="_blank"> Steve Matteson </a>
+<br><br>
+SYMBOLS:
+<br>
+<a href="http://thenounproject.com/term/water/212/" target="_blank">  Water </a>
+by
+<a href="http://thenounproject.com/edward/" target="_blank"> Edward Boatman </a>
+<br>
+<a href="http://thenounproject.com/term/lightning-bolt/21604/" target="_blank">  Lightning-Bolt </a>
+by
+<a href="http://thenounproject.com/catalarem/" target="_blank"> Rémy Médard </a>
+<br>
+<a href="http://thenounproject.com/term/city/1566/" target="_blank">  City </a>
+by
+<a href="http://thenounproject.com/thibault.geffroy/" target="_blank"> Thibault Geffroy </a>
+</div>
+
 </html>
