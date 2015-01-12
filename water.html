@@ -652,6 +652,46 @@ overflow: hidden;
 -webkit-transform-origin: 0 0;
 }
 
+/* tab two */
+#tabb {
+background: white;
+height: 350px;
+left: -300px;
+overflow: hidden;
+position: fixed;
+text-align: center;
+top: 170px;
+transition-duration:0.3s;
+width: 300px;
+z-index: 999999;
+-moz-transition-duration:0.3s;
+-o-transition-duration:0.3s;
+-webkit-transition-duration:0.3s;
+}
+
+#tabtitleb {
+background: white;
+border: 1px solid black;
+left: -30px;
+padding: 7px;
+position: fixed;
+top: 250px;
+transform:rotate(-90deg);
+transition-duration:0.3s;
+z-index: 999999;
+-moz-transform:rotate(-90deg);
+-moz-transition-duration:0.3s;
+-ms-transform:rotate(-90deg);
+-o-transform:rotate(-90deg);
+-o-transition-duration:0.3s;
+-webkit-transform:rotate(-90deg);
+-webkit-transition-duration:0.3s;
+}
+
+#calculatorb:hover #tabb {
+left: 0px;
+}
+
 </style>
 
 </head>
@@ -683,6 +723,17 @@ CALCULATE
 </div>
 <div id="tab">
 <iframe src="http://codepen.io/josemc/full/JoKOZm/" frameborder="0" width="500" height="750" allowTransparency="true"></iframe>
+</div>
+</div>
+
+<!-- votes -->
+<div id="calculatorb">
+<div id="tabtitleb">
+SUBMIT
+</div>
+<div id="tabb">
+<script type="text/javascript" charset="utf-8" src="https://secure.polldaddy.com/p/8576894.js"></script>
+<noscript><a href="https://polldaddy.com/poll/8576894/">how many gallons of water do you use a day?</a></noscript>
 </div>
 </div>
 
