@@ -1,0 +1,2385 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<!-- energy saver -->
+<script type="text/javascript" src="http://www.onlineleaf.com/savetheenvironment.js?time=35"> </script>
+
+<!-- google webfonts -->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+<!-- favicon -->
+<link rel="shortcut icon" href="https://raw.githubusercontent.com/monicaalee/ep/gh-pages/images/logo.png">
+
+<!-- title -->
+<title>green is the new black</title>
+
+<!-- popups -->
+<script type="text/javascript" 
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script> 
+<script> 
+$(document).ready(function() { 
+// 
+$('a.poplight[href^=#]').click(function() { 
+var popID = $(this).attr('rel'); //Get Popup Name 
+var popURL = $(this).attr('href'); //Get Popup href to define size 
+var query= popURL.split('?'); 
+var dim= query[1].split('&'); 
+var popWidth = dim[0].split('=')[1]; //Gets the first query string value 
+$('#' + popID).fadeIn().css({ 'width': Number( popWidth ) }).prepend('<a href="#" class="close"><img src="https://31.media.tumblr.com/351314c54892e9bebbd2b6dabcaefcef/tumblr_inline_n3xpoxUgxH1qgm03k.png" class="close_btn" title="Close" alt="Close" /></a>'); 
+var popMargTop = ($('#' + popID).height() + 80) / 2; 
+var popMargLeft = ($('#' + popID).width() + 80) / 2; 
+//Apply Margin to Popup 
+$('#' + popID).css({ 
+'margin-top' : -popMargTop,
+'margin-left' : -popMargLeft 
+}); 
+$('body').append('<div id="popupback"></div>');
+$('#popupback').css({'filter' : 'alpha(opacity=80)'}).fadeIn(); //Fade in the fade layer - .css({'filter' : 'alpha(opacity=80)'}) 
+return false; 
+}); 
+$('a.close, #popupback').live('click', function() { 
+$('#popupback , .popup').fadeOut(function() { 
+$('#popupback, a.close').remove(); //fade them both out 
+}); 
+return false; 
+}); 
+}); 
+</script>
+
+<style type="text/css">
+
+body {
+font-family: 'Open Sans', sans-serif;
+margin: 0px;
+overflow: scroll;
+overflow-x: hidden;
+padding: 0px;
+text-align: left;
+user-select: none;
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+max-width: 100%;
+}
+
+body a {
+text-decoration: none;
+}
+
+::-moz-selection {
+color: black;
+background: transparent;
+}
+
+::selection {
+color: black;
+background: transparent;
+}
+
+/* scrollbar */
+::-webkit-scrollbar-thumb:vertical {
+background-color: darkblue;
+height: 10px;
+}
+::-webkit-scrollbar-thumb:horizontal {
+background-color: darkblue;
+height: 7px;
+}
+::-webkit-scrollbar {
+background-color: transparent;
+height: 10px;
+width: 13px;
+}
+
+.header {
+background: white;
+font-size: 17px;
+float: left;
+height: 70px;
+left: 0px;
+line-height: 11px;
+margin: 0px 0px 20px 0px;
+opacity: 0.9;
+padding: 7px;
+position: fixed;
+width: 100%;
+z-index: 999;
+}
+
+.header a {
+color: black;
+}
+
+.header a:hover {
+color: black;
+font-weight: bold;
+}
+
+.header img {
+height: 35px;
+left: 0px;
+}
+
+.questions {
+background: transparent;
+color: white;
+font-size: 21px;
+font-weight: bold;
+line-height: 21px;
+margin: 10px auto 0px auto;
+opacity: 0.95;
+padding: 5px 10px 5px 10px;
+text-align: center;
+text-shadow: 0px 0px 3px black;
+}
+
+.questionsb {
+background: transparent;
+color: black;
+font-size: 21px;
+font-weight: bold;
+max-height: 50px;
+line-height: 21px;
+margin: 10px auto 0px auto;
+opacity: 0.95;
+padding: 5px 10px 5px 10px;
+text-align: center;
+text-shadow: 0px 0px 3px white;
+width: 500px;
+}
+
+#energy {
+background-image: url('https://raw.githubusercontent.com/monicaalee/ep/gh-pages/images/water.jpg');
+background-repeat: no-repeat;
+background-position: fixed;
+background-size: 100% 100%;
+overflow: hidden;
+position: absolute;
+top: 77px;
+transition-timing-function: ease;
+width: 100%;
+}
+
+.wr {
+height: 100px;
+width: 100%;
+}
+
+.wt {
+margin: 30px auto auto auto;
+}
+
+.box {
+background: white;
+border: 3px solid skyblue;
+border-radius: 100%;
+font-size: 17px;
+height: 100px;
+margin: 10px;
+opacity: 0.85;
+overflow: hidden;
+padding: 3px;
+text-align: center;
+width: 100px;
+}
+
+.box .show {
+display: none;
+}
+
+.show a {
+color: white;
+}
+
+.box:hover .show {
+color: white;
+display: inline;
+}
+
+.box:hover .hide {
+display: none;
+}
+
+.box:hover {
+background: skyblue;
+border-radius: 100%;
+color: white;
+opacity: 1;
+}
+
+.boxg {
+background: white;
+border: 3px solid seagreen;
+border-radius: 100%;
+height: 100px;
+margin: 10px;
+opacity: 0.85;
+overflow: hidden;
+padding: 3px;
+text-align: center;
+width: 100px;
+}
+
+.boxg .show {
+display: none;
+}
+
+.boxg:hover .show {
+color: white;
+display: inline;
+}
+
+.boxg:hover .hide {
+display: none;
+}
+
+.boxg:hover {
+background: seagreen;
+border-radius: 100%;
+color: white;
+font-weight: bold;
+opacity: 1;
+}
+
+.boxr {
+background: white;
+border: 3px solid darkred;
+border-radius: 100%;
+height: 100px;
+margin: 10px;
+opacity: 0.85;
+overflow: hidden;
+padding: 3px;
+text-align: center;
+width: 100px;
+}
+
+.boxr .show {
+display: none;
+}
+
+.boxr:hover .show {
+color: white;
+display: inline;
+}
+
+.boxr:hover .hide {
+display: none;
+}
+
+.boxr:hover {
+background: darkred;
+border-radius: 100%;
+color: white;
+font-weight: bold;
+opacity: 1;
+}
+
+.bo {
+background: transparent;
+height: 0px;
+margin: 0px;
+overflow: hidden;
+padding: 5px;
+text-align: center;
+width: 0px;
+}
+
+.boxs {
+background: white;
+border: 3px solid black;
+height: 100px;
+margin: 10px;
+opacity: 0.85;
+overflow: hidden;
+padding: 3px;
+text-align: center;
+width: 200px;
+}
+
+.boxs .show {
+display: none;
+}
+
+.boxs:hover .show {
+color: white;
+display: inline;
+}
+
+.boxs:hover .hide {
+display: none;
+}
+
+.boxs:hover {
+background: steelblue;
+color: white;
+opacity: 1;
+}
+
+.o {
+background: white;
+border: 3px solid skyblue;
+border-radius: 100%;
+height: 80px;
+margin: 10px;
+opacity: 0.85;
+overflow: hidden;
+padding: 3px;
+text-align: center;
+width: 80px;
+}
+
+.o .show {
+display: none;
+}
+
+.o:hover .show {
+color: white;
+display: inline;
+}
+
+.o:hover .hide {
+display: none;
+}
+
+.o:hover {
+background: skyblue;
+border-radius: 100%;
+color: white;
+opacity: 1;
+}
+
+.oo {
+background: white;
+border: 3px solid seagreen;
+border-radius: 100%;
+height: 80px;
+margin: 10px;
+opacity: 0.85;
+overflow: hidden;
+padding: 3px;
+text-align: center;
+width: 80px;
+}
+
+.oo .show {
+display: none;
+}
+
+.oo:hover .show {
+color: white;
+display: inline;
+}
+
+.oo:hover .hide {
+display: none;
+}
+
+.oo:hover {
+background: seagreen;
+border-radius: 100%;
+color: white;
+opacity: 1;
+}
+
+.ooo {
+background: white;
+border: 3px solid darkred;
+border-radius: 100%;
+height: 80px;
+margin: 10px;
+opacity: 0.85;
+overflow: hidden;
+padding: 3px;
+text-align: center;
+width: 80px;
+}
+
+.ooo .show {
+display: none;
+}
+
+.ooo:hover .show {
+color: white;
+display: inline;
+}
+
+.ooo:hover .hide {
+display: none;
+}
+
+.ooo:hover {
+background: darkred;
+border-radius: 100%;
+color: white;
+opacity: 1;
+}
+
+.boxs {
+background: white;
+border: 3px solid steelblue;
+height: 100px;
+margin: 10px;
+opacity: 0.85;
+overflow: hidden;
+padding: 3px;
+text-align: center;
+width: 200px;
+}
+
+.boxs .show {
+display: none;
+}
+
+.boxs:hover .show {
+color: white;
+display: inline;
+}
+
+.boxs:hover .hide {
+display: none;
+}
+
+.boxs:hover {
+background: steelblue;
+color: white;
+opacity: 1;
+}
+
+/* popups */
+#popupback {
+display: none; /*--hidden by default--*/
+background: white;
+background-image: url('');
+background-size: 100% 100%;
+position: fixed; 
+left: 0px; 
+top: 0px;
+width: 100%; height: 100%;
+opacity: 0.95;
+z-index: 999999;
+}
+
+.popup {
+display: none; /*--hidden by default--*/
+background: white;
+background-image: url('');
+background-size: 100% 100%;
+max-height: 750px;
+overflow-y: auto;
+padding: 0px;
+color: black;
+text-align: center;
+font-size: 12px;
+position: fixed;
+line-height: 17px;
+top: 50%;
+left: 50%;
+border: 1px solid black;
+border-radius: 0px;
+z-index: 9999999;
+-webkit-animation: floor 1s;
+-moz-animation: floor 1s;
+-ms-animation: floor 1s;
+}
+
+.popup a {
+color: green;
+}
+
+.popup a:hover {
+color: black;
+text-decoration: underline;
+}
+
+img.close_btn {
+float: right;
+right: 0px;
+top: 0px;
+margin: 0px;
+position: absolute;
+z-index: 999999;
+height: 30px;
+width: 30px;
+display: none;
+}
+
+*html .popup {
+position: absolute;
+}
+
+@-webkit-keyframes floor {
+0% {
+opacity: 0;
+-webkit-transform: translateY(-50%);
+}
+25% {
+opacity: 0.3;
+}
+50% {
+opacity: 0.5;
+}
+75% {
+opacity: 0.7;
+}
+100% {
+opacity: 1;
+-webkit-transform: translateY(0%);
+}
+}
+
+@-moz-keyframes floor {
+0% {
+opacity: 0;
+-webkit-transform: translateY(-50%);
+}
+25% {
+opacity: 0.3;
+}
+50% {
+opacity: 0.5;
+}
+75% {
+opacity: 0.7;
+}
+100% {
+opacity: 1;
+-webkit-transform: translateY(0%);
+}
+}
+
+@-o-keyframes floor {
+0% {
+opacity: 0;
+-webkit-transform: translateY(-50%);
+}
+25% {
+opacity: 0.3;
+}
+50% {
+opacity: 0.5;
+}
+75% {
+opacity: 0.7;
+}
+100% {
+opacity: 1;
+-webkit-transform: translateY(0%);
+}
+}
+
+@keyframes floor {
+0% {
+opacity: 0;
+-webkit-transform: translateY(-50%);
+}
+25% {
+opacity: 0.3;
+}
+50% {
+opacity: 0.5;
+}
+75% {
+opacity: 0.7;
+}
+100% {
+opacity: 1;
+-webkit-transform: translateY(0%);
+}
+}
+
+#credit {
+bottom: 0px;
+opacity: 0.5;
+position: fixed;
+right: 0px;
+}
+
+#credit a {
+color: white;
+}
+
+#credit:hover {
+opacity: 1;
+}
+
+/* tab */
+#tab {
+background: white;
+height: 350px;
+left: -400px;
+overflow: hidden;
+position: fixed;
+text-align: center;
+top: 170px;
+transition-duration:0.3s;
+width: 400px;
+z-index: 999999;
+-moz-transition-duration:0.3s;
+-o-transition-duration:0.3s;
+-webkit-transition-duration:0.3s;
+}
+
+#tabtitle {
+background: white;
+border: 1px solid black;
+left: -30px;
+opacity: 0.8;
+padding: 7px;
+position: fixed;
+top: 205px;
+transform:rotate(-90deg);
+transition-duration:0.3s;
+z-index: 99999;
+-moz-transform:rotate(-90deg);
+-moz-transition-duration:0.3s;
+-ms-transform:rotate(-90deg);
+-o-transform:rotate(-90deg);
+-o-transition-duration:0.3s;
+-webkit-transform:rotate(-90deg);
+-webkit-transition-duration:0.3s;
+}
+
+#calculator:hover #tab {
+left: -100px;
+}
+
+#iframe {
+overflow: hidden;
+-ms-zoom: 1.5;
+-moz-transform: scale(1.5);
+-moz-transform-origin: 0 0;
+-o-transform: scale(1.5);
+-o-transform-origin: 0 0;
+-webkit-transform: scale(1.5);
+-webkit-transform-origin: 0 0;
+}
+
+/* tab two */
+#tabb {
+background: white;
+height: 400px;
+left: -300px;
+overflow: hidden;
+position: fixed;
+text-align: center;
+top: 150px;
+transition-duration:0.3s;
+width: 250px;
+z-index: 999999;
+-moz-transition-duration:0.3s;
+-o-transition-duration:0.3s;
+-webkit-transition-duration:0.3s;
+}
+
+#tabtitleb {
+background: white;
+border: 1px solid black;
+left: -34px;
+opacity: 0.8;
+padding: 7px;
+position: fixed;
+top: 300px;
+transform:rotate(-90deg);
+transition-duration:0.3s;
+z-index: 99999;
+-moz-transform:rotate(-90deg);
+-moz-transition-duration:0.3s;
+-ms-transform:rotate(-90deg);
+-o-transform:rotate(-90deg);
+-o-transition-duration:0.3s;
+-webkit-transform:rotate(-90deg);
+-webkit-transition-duration:0.3s;
+}
+
+#calculatorb:hover #tabb {
+left: 0px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- header -->
+<table class="header">
+<tr>
+<td>
+<a href="http://monicaalee.github.io/ep/"> <img src="https://raw.githubusercontent.com/monicaalee/ep/gh-pages/images/THELOGO.png"> </a>
+</td>
+<td style="float: right;">
+<br/><br/>
+<a href="http://monicaalee.github.io/ep/water">WATER</a>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="http://monicaalee.github.io/ep/energy">ENERGY</a>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="http://monicaalee.github.io/ep/others">OTHERS</a>
+&nbsp;&nbsp;&nbsp;&nbsp;
+</td>
+</tr>
+</table>
+
+<!-- calculator -->
+<div id="calculator">
+<div id="tabtitle">
+add it up
+</div>
+<div id="tab">
+<iframe src="http://codepen.io/josemc/full/JoKOZm/" frameborder="0" width="500" height="750" allowTransparency="true"></iframe>
+</div>
+</div>
+
+<!-- votes -->
+<div id="calculatorb">
+<div id="tabtitleb">
+your total
+</div>
+<div id="tabb">
+<center>
+<script type="text/javascript" charset="utf-8" src="https://secure.polldaddy.com/p/8576894.js"></script>
+<noscript><a href="https://polldaddy.com/poll/8576894/">how many gallons of water do you use a day?</a></noscript>
+</center>
+</div>
+</div>
+
+<!-- section start -->
+<div id="energy">
+
+<br/><br/>
+
+<!-- section one -->
+<div class="questionsb">
+<span class="questions">
+How long do you spend in the shower?
+</span>
+</div>
+
+<table class="wt">
+<tr class="wr">
+<td class="o" style="width: 100px; height: 100px;">
+<p class="hide">
+lowflow shower
+</p>
+<p class="show">
+2 gpm
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="boxg">
+<p class="hide">
+1 minute
+</p>
+<p class="show">
+<a href="#?w=500" rel="good" class="poplight">2 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="boxg">
+<p class="hide">
+3 minutes
+</p>
+<p class="show">
+<a href="#?w=500" rel="good" class="poplight">6 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="boxg">
+<p class="hide">
+5 minutes
+</p>
+<p class="show">
+<a href="#?w=500" rel="good" class="poplight">10 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="boxg">
+<p class="hide">
+7 minutes
+</p>
+<p class="show">
+<a href="#?w=500" rel="good" class="poplight">14 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="boxg">
+<p class="hide">
+10 minutes
+</p>
+<p class="show">
+<a href="#?w=500" rel="bad" class="poplight">20 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="boxr">
+<p class="hide">
+15 minutes
+</p>
+<p class="show">
+<a href="#?w=500" rel="bad" class="poplight">30 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="boxr">
+<p class="hide">
+20 minutes
+</p>
+<p class="show">
+<a href="#?w=500" rel="bad" class="poplight">40 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="boxr">
+<p class="hide">
+30 minutes
+</p>
+<p class="show">
+<a href="#?w=500" rel="bad" class="poplight">60 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="boxr">
+<p class="hide">
+45 minutes
+</p>
+<p class="show">
+<a href="#?w=500" rel="bad" class="poplight">90 gallons</a>
+</p>
+</td>
+</tr>
+</table>
+
+<table class="wt">
+<tr class="wr">
+<td class="o" style="width: 100px; height: 100px;">
+<p class="hide">
+regular shower
+</p>
+<p class="show">
+4 gpm
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="boxg">
+<p class="hide">
+1 minute
+</p>
+<p class="show">
+<a href="#?w=500" rel="good" class="poplight">4 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="boxg">
+<p class="hide">
+3 minutes
+</p>
+<p class="show">
+<a href="#?w=500" rel="good" class="poplight">12 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="boxg">
+<p class="hide">
+5 minutes
+</p>
+<p class="show">
+<a href="#?w=500" rel="good" class="poplight">20 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="boxr">
+<p class="hide">
+7 minutes
+</p>
+<p class="show">
+<a href="#?w=500" rel="bad" class="poplight">28 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="boxr">
+<p class="hide">
+10 minutes
+</p>
+<p class="show">
+<a href="#?w=500" rel="bad" class="poplight">40 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="boxr">
+<p class="hide">
+15 minutes
+</p>
+<p class="show">
+<a href="#?w=500" rel="bad" class="poplight">60 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="boxr">
+<p class="hide">
+20 minutes
+</p>
+<p class="show">
+<a href="#?w=500" rel="bad" class="poplight">80 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="boxr">
+<p class="hide">
+30 minutes
+</p>
+<p class="show">
+<a href="#?w=500" rel="bad" class="poplight">120 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="boxr">
+<p class="hide">
+45 minutes
+</p>
+<p class="show">
+<a href="#?w=500" rel="bad" class="poplight">180 gallons</a>
+</p>
+</td>
+</tr>
+</table>
+  
+<table class="wt">
+<tr class="wr">
+<td class="boxs">
+<h1> TIPS: </h1>
+</td>
+<td class="boxs">
+<p class="hide">
+<img height="65px" src="https://raw.githubusercontent.com/monicaalee/ep/gh-pages/images/bucket%20icon.png">
+<img height="65px" src="https://raw.githubusercontent.com/monicaalee/ep/gh-pages/images/plant%20icon.png">
+</p>
+<p class="show">
+Catch a bucket of shower water to water plants.
+</p>
+</td>
+<td class="boxs">
+<p class="hide">
+<img height="65px" src="https://raw.githubusercontent.com/monicaalee/ep/gh-pages/images/music%20icon.png">
+<img height="65px" src="https://raw.githubusercontent.com/monicaalee/ep/gh-pages/images/alarm%20icon.png">
+</p>
+<p class="show">
+Create a 5-10 minute playlist (2-3 songs) or alarm to get you out.
+</p>
+</td>
+<td class="boxs">
+<p class="hide">
+<img height="65px" src="https://raw.githubusercontent.com/monicaalee/ep/gh-pages/images/sun%20icon.png">
+<img height="65px" src="https://raw.githubusercontent.com/monicaalee/ep/gh-pages/images/splash%20icon.png">
+</p>
+<p class="show">
+Take showers in the morning when you're in a rush and to wake you up.
+</p>
+</td>
+<td class="boxs">
+<p class="hide">
+<img height="65px" src="https://raw.githubusercontent.com/monicaalee/ep/gh-pages/images/shaving%20cream%20icon.png">
+<img height="65px" src="https://raw.githubusercontent.com/monicaalee/ep/gh-pages/images/razor%20icon.png">
+</p>
+<p class="show">
+Turn off the water when you shave so it doesn't just keep running.
+</p>
+</td>
+</tr>
+</table>
+
+<br/><br/><br/>
+
+<!-- section two -->
+<table>
+<th>
+<td>
+<div class="questionsb">
+<span class="questions">
+How full do you fill your baths?
+</span>
+</div>
+<br/>
+</td>
+</th>
+<th>
+<td class="o">
+<p class="hide">
+n / a
+</p>
+<p class="show">
+<a href="#?w=500" rel="good" class="poplight">0 gallons!</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="oo">
+<p class="hide">
+half full
+</p>
+<p class="show">
+<a href="#?w=500" rel="good" class="poplight">25 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="ooo">
+<p class="hide">
+full bath
+</p>
+<p class="show">
+<a href="#?w=500" rel="bad" class="poplight">50 gallons</a>
+</p>
+</td>
+</th>
+</table>
+
+<br/>
+
+<table>
+<th>
+<td>
+<div class="questionsb">
+<span class="questions">
+How often do you flush the toilet per day?
+</span>
+</div>
+<br/>
+</td>
+</th>
+<th>
+<td class="o">
+<p class="hide">
+lowflow toilet
+</p>
+<p class="show">
+1.5 gpf
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="oo">
+<p class="hide">
+1 flush
+</p>
+<p class="show">
+<a href="#?w=500" rel="good" class="poplight">1.5 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="oo">
+<p class="hide">
+2 flushes
+</p>
+<p class="show">
+<a href="#?w=500" rel="good" class="poplight">3 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="oo">
+<p class="hide">
+3 flushes
+</p>
+<p class="show">
+<a href="#?w=500" rel="good" class="poplight">4.5 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="oo">
+<p class="hide">
+4 flushes
+</p>
+<p class="show">
+<a href="#?w=500" rel="good" class="poplight">6 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="oo">
+<p class="hide">
+5 flushes
+</p>
+<p class="show">
+<a href="#?w=500" rel="good" class="poplight">7.5 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="oo">
+<p class="hide">
+6 flushes
+</p>
+<p class="show">
+<a href="#?w=500" rel="good" class="poplight">9 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="ooo">
+<p class="hide">
+7 flushes
+</p>
+<p class="show">
+<a href="#?w=500" rel="bad" class="poplight">10.5 gallons</a>
+</p>
+</td>
+</th>
+</table>
+
+<br/>
+
+<table>
+<th>
+<td>
+<div class="questionsb">
+</div>
+<br/>
+</td>
+</th>
+<th>
+<td class="o">
+<p class="hide">
+regular toilet
+</p>
+<p class="show">
+3.5 gpf
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="oo">
+<p class="hide">
+1 flush
+</p>
+<p class="show">
+<a href="#?w=500" rel="good" class="poplight">3.5 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="oo">
+<p class="hide">
+2 flushes
+</p>
+<p class="show">
+<a href="#?w=500" rel="good" class="poplight">7 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="ooo">
+<p class="hide">
+3 flushes
+</p>
+<p class="show">
+<a href="#?w=500" rel="bad" class="poplight">10.5 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="ooo">
+<p class="hide">
+4 flushes
+</p>
+<p class="show">
+<a href="#?w=500" rel="bad" class="poplight">14 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="ooo">
+<p class="hide">
+5 flushes
+</p>
+<p class="show">
+<a href="#?w=500" rel="bad" class="poplight">17.5 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="ooo">
+<p class="hide">
+6 flushes
+</p>
+<p class="show">
+<a href="#?w=500" rel="bad" class="poplight">21 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="ooo">
+<p class="hide">
+7 flushes
+</p>
+<p class="show">
+<a href="#?w=500" rel="bad" class="poplight">24.5 gallons</a>
+</p>
+</td>
+</th>
+</table>
+
+<br/>
+
+<table class="wt">
+<tr class="wr">
+<td class="boxs">
+<h1> TIPS: </h1>
+</td>
+<td class="boxs">
+<p class="hide">
+<img height="65px" src="https://raw.githubusercontent.com/monicaalee/ep/gh-pages/images/bucket%20icon.png">
+<img height="65px" src="https://raw.githubusercontent.com/monicaalee/ep/gh-pages/images/plant%20icon.png">
+</p>
+<p class="show">
+Use buckets of bathwater to water your plants and flush your toilet.
+</p>
+</td>
+<td class="boxs">
+<p class="hide">
+<img height="65px" src="https://raw.githubusercontent.com/monicaalee/ep/gh-pages/images/cat%20icon.png">
+<img height="65px" src="https://raw.githubusercontent.com/monicaalee/ep/gh-pages/images/dog%20icon.png">
+</p>
+<p class="show">
+Bathe your pets or your car right after you take a bath, so it's a bath for two or more. 
+</p>
+</td>
+<td class="boxs">
+<p class="hide">
+<img height="65px" src="https://raw.githubusercontent.com/monicaalee/ep/gh-pages/images/brick.png">
+<img height="65px" src="https://raw.githubusercontent.com/monicaalee/ep/gh-pages/images/toilet%20icon.png">
+</p>
+<p class="show">
+Put a brick in your toilet's water tank to reduce by 0.5 gallons per flush.
+</p>
+</td>
+<td class="boxs">
+<p class="hide">
+<img height="65px" src="https://raw.githubusercontent.com/monicaalee/ep/gh-pages/images/toilet%20paper%20icon.png">
+</p>
+<p class="show">
+Try using less toilet paper!</p>
+</td>
+</tr>
+</table>
+
+<br/><br/><br/>
+
+<!-- section three -->
+<table>
+<th>
+<td>
+<div class="questionsb">
+<span class="questions">
+How long do you brush your teeth and
+</span>
+<br/><br/>
+<span class="questions">
+wash your hands each day?
+</span>
+</div>
+<br/>
+</td>
+</th>
+<th>
+<td class="o">
+<p class="hide">
+lowflow sink
+</p>
+<p class="show">
+1.5 gpm
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="oo">
+<p class="hide">
+1 minute
+</p>
+<p class="show">
+<a href="#?w=500" rel="good" class="poplight">1.5 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="oo">
+<p class="hide">
+2 minutes
+</p>
+<p class="show">
+<a href="#?w=500" rel="good" class="poplight">3 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="oo">
+<p class="hide">
+3 minutes
+</p>
+<p class="show">
+<a href="#?w=500" rel="good" class="poplight">4.5 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="oo">
+<p class="hide">
+4 minutes
+</p>
+<p class="show">
+<a href="#?w=500" rel="good" class="poplight">6 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="oo">
+<p class="hide">
+5 minutes
+</p>
+<p class="show">
+<a href="#?w=500" rel="good" class="poplight">7.5 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="oo">
+<p class="hide">
+6 minutes
+</p>
+<p class="show">
+<a href="#?w=500" rel="good" class="poplight">9 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="ooo">
+<p class="hide">
+7 minutes
+</p>
+<p class="show">
+<a href="#?w=500" rel="bad" class="poplight">10.5 gallons</a>
+</p>
+</td>
+</th>
+</table>
+
+<br/>
+
+<table>
+<th>
+<td>
+<div class="questionsb">
+</div>
+<br/>
+</td>
+</th>
+<th>
+<td class="o">
+<p class="hide">
+regular sink
+</p>
+<p class="show">
+4 gpm
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="oo">
+<p class="hide">
+1 minute
+</p>
+<p class="show">
+<a href="#?w=500" rel="good" class="poplight">4 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="oo">
+<p class="hide">
+2 minutes
+</p>
+<p class="show">
+<a href="#?w=500" rel="good" class="poplight">8 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="ooo">
+<p class="hide">
+3 minutes
+</p>
+<p class="show">
+<a href="#?w=500" rel="bad" class="poplight">12 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="ooo">
+<p class="hide">
+4 minutes
+</p>
+<p class="show">
+<a href="#?w=500" rel="bad" class="poplight">16 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="ooo">
+<p class="hide">
+5 minutes
+</p>
+<p class="show">
+<a href="#?w=500" rel="bad" class="poplight">20 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="ooo">
+<p class="hide">
+6 minutes
+</p>
+<p class="show">
+<a href="#?w=500" rel="bad" class="poplight">24 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="ooo">
+<p class="hide">
+7 minutes
+</p>
+<p class="show">
+<a href="#?w=500" rel="bad" class="poplight">28 gallons</a>
+</p>
+</td>
+</th>
+</table>
+
+<br/>
+
+<table>
+<th>
+<td>
+<div class="questionsb">
+<span class="questions">
+Does your sink leak?
+</span>
+</div>
+<br/>
+</td>
+</th>
+<th>
+<td class="o">
+<p class="hide">
+no
+</p>
+<p class="show">
+<a href="#?w=500" rel="good" class="poplight">0 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="ooo">
+<p class="hide">
+10.5 drips per min
+</p>
+<p class="show">
+<a href="#?w=500" rel="bad" class="poplight">1 gallon</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="ooo">
+<p class="hide">
+21 drips per min
+</p>
+<p class="show">
+<a href="#?w=500" rel="bad" class="poplight">2 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="ooo">
+<p class="hide">
+32.5 drips per min
+</p>
+<p class="show">
+<a href="#?w=500" rel="bad" class="poplight">3 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="ooo">
+<p class="hide">
+43 drips per min
+</p>
+<p class="show">
+<a href="#?w=500" rel="bad" class="poplight">4 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="ooo">
+<p class="hide">
+54.5 drips per min
+</p>
+<p class="show">
+<a href="#?w=500" rel="bad" class="poplight">5 gallons</a>
+</p>
+</td>
+</th>
+</table>
+
+<table class="wt">
+<tr class="wr">
+<td class="boxs">
+<h1> TIPS: </h1>
+</td>
+<td class="boxs">
+<p class="hide">
+<img height="65px" src="https://raw.githubusercontent.com/monicaalee/ep/gh-pages/images/brushing%20teeth.png">
+<img height="65px" src="https://raw.githubusercontent.com/monicaalee/ep/gh-pages/images/washing%20hands.png">
+</p>
+<p class="show">
+Stop the water when you brush your teeth and soap your hands.
+</p>
+</td>
+<td class="boxs">
+<p class="hide">
+<img height="65px" src="https://raw.githubusercontent.com/monicaalee/ep/gh-pages/images/sink.png">
+</p>
+<p class="show">
+If you have a leaky sink, you should fix it to save money on your water bill.
+</p>
+</td>
+<td class="boxs">
+<p class="hide">
+<img height="65px" src="https://raw.githubusercontent.com/monicaalee/ep/gh-pages/images/sink.png">
+<img height="65px" src="https://raw.githubusercontent.com/monicaalee/ep/gh-pages/images/bucket%20icon.png">
+</p>
+<p class="show">
+If you have a leaky sink, catch the water and water plants.
+</p>
+</td>
+</tr>
+</table>
+
+<br/><br/><br/>
+
+<!-- section four -->
+<table>
+<th>
+<td>
+<div class="questionsb">
+<span class="questions">
+How long do you do the dishes by hand?
+</span>
+</div>
+<br/>
+</td>
+</th>
+<th>
+<td class="o">
+<p class="hide">
+lowflow sink
+</p>
+<p class="show">
+1.5 gpm
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="oo">
+<p class="hide">
+5 minutes
+</p>
+<p class="show">
+<a href="#?w=500" rel="good" class="poplight">7.5 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="oo">
+<p class="hide">
+10 minutes
+</p>
+<p class="show">
+<a href="#?w=500" rel="good" class="poplight">15 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="ooo">
+<p class="hide">
+15 minutes
+</p>
+<p class="show">
+<a href="#?w=500" rel="bad" class="poplight">22.5 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="ooo">
+<p class="hide">
+20 minutes
+</p>
+<p class="show">
+<a href="#?w=500" rel="bad" class="poplight">30 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="ooo">
+<p class="hide">
+30 minutes
+</p>
+<p class="show">
+<a href="#?w=500" rel="bad" class="poplight">45 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="ooo">
+<p class="hide">
+45 minutes
+</p>
+<p class="show">
+<a href="#?w=500" rel="bad" class="poplight">67.5 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+</th>
+</table>
+
+<table>
+<th>
+<td>
+<div class="questionsb">
+</div>
+<br/>
+</td>
+</th>
+<th>
+<td class="o">
+<p class="hide">
+regular sink
+</p>
+<p class="show">
+4 gpm
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="ooo">
+<p class="hide">
+5 minutes
+</p>
+<p class="show">
+<a href="#?w=500" rel="bad" class="poplight">20 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="ooo">
+<p class="hide">
+10 minutes
+</p>
+<p class="show">
+<a href="#?w=500" rel="bad" class="poplight">40 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="ooo">
+<p class="hide">
+15 minutes
+</p>
+<p class="show">
+<a href="#?w=500" rel="bad" class="poplight">60 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="ooo">
+<p class="hide">
+20 minutes
+</p>
+<p class="show">
+<a href="#?w=500" rel="bad" class="poplight">80 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="ooo">
+<p class="hide">
+30 minutes
+</p>
+<p class="show">
+<a href="#?w=500" rel="bad" class="poplight">120 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="ooo">
+<p class="hide">
+45 minutes
+</p>
+<p class="show">
+<a href="#?w=500" rel="bad" class="poplight">180 gallons</a>
+</p>
+</td>
+</th>
+</table>
+
+<br/>
+
+<table>
+<th>
+<td>
+<div class="questionsb">
+<span class="questions">
+...with a dishwasher?
+</span>
+</div>
+<br/>
+</td>
+</th>
+<th>
+<td class="o">
+<p class="hide">
+energy star dishwasher
+</p>
+<p class="show">
+4 gpl
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="oo">
+<p class="hide">
+1 load
+</p>
+<p class="show">
+<a href="#?w=500" rel="good" class="poplight">4 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="oo">
+<p class="hide">
+2 loads
+</p>
+<p class="show">
+<a href="#?w=500" rel="good" class="poplight">8 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="oo">
+<p class="hide">
+3 loads
+</p>
+<p class="show">
+<a href="#?w=500" rel="good" class="poplight">12 gallons</a>
+</p>
+</td>
+</th>
+</table>
+
+<table>
+<th>
+<td>
+<div class="questionsb">
+</div>
+<br/>
+</td>
+</th>
+<th>
+<td class="o">
+<p class="hide">
+regular dishwasher
+</p>
+<p class="show">
+12 gpl
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="oo">
+<p class="hide">
+1 load
+</p>
+<p class="show">
+<a href="#?w=500" rel="good" class="poplight">12 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="ooo">
+<p class="hide">
+2 loads
+</p>
+<p class="show">
+<a href="#?w=500" rel="bad" class="poplight">24 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="ooo">
+<p class="hide">
+3 loads
+</p>
+<p class="show">
+<a href="#?w=500" rel="bad" class="poplight">36 gallons</a>
+</p>
+</td>
+</th>
+</table>
+
+<table class="wt">
+<tr class="wr">
+<td class="boxs">
+<h1> TIPS: </h1>
+</td>
+<td class="boxs">
+<p class="hide">
+<img height="65px" src="https://raw.githubusercontent.com/monicaalee/ep/gh-pages/images/dishes.png">
+</p>
+<p class="show">
+Stop the water when you wash the dishes and rinse things as a group.
+</p>
+</td>
+<td class="boxs">
+<p class="hide">
+<img height="65px" src="https://raw.githubusercontent.com/monicaalee/ep/gh-pages/images/dishwasher.png">
+</p>
+<p class="show">
+Fully fill up the dishwasher before using it.
+</p>
+</td>
+<td class="boxs">
+<p class="hide">
+<img height="65px" src="https://raw.githubusercontent.com/monicaalee/ep/gh-pages/images/sink.png">
+<img height="65px" src="https://raw.githubusercontent.com/monicaalee/ep/gh-pages/images/bucket%20icon.png">
+</p>
+<p class="show">
+Soak dishes in soap water to make them easier to clean. 
+</p>
+</td>
+</tr>
+</table>
+
+<br/><br/><br/>
+
+<!-- section five -->
+<table>
+<th>
+<td>
+<div class="questionsb">
+<span class="questions">
+How many loads of laundry do you wash per week?
+</span>
+</div>
+<br/>
+</td>
+</th>
+<th>
+<td class="o">
+<p class="hide">
+<small>energy star</small> washer
+</p>
+<p class="show">
+27 gpl
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="oo">
+<p class="hide">
+1 load
+</p>
+<p class="show">
+<a href="#?w=500" rel="good" class="poplight">27 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="ooo">
+<p class="hide">
+2 loads
+</p>
+<p class="show">
+<a href="#?w=500" rel="bad" class="poplight">54 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="ooo">
+<p class="hide">
+3 loads
+</p>
+<p class="show">
+<a href="#?w=500" rel="bad" class="poplight">81 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="ooo">
+<p class="hide">
+4 loads
+</p>
+<p class="show">
+<a href="#?w=500" rel="bad" class="poplight">108 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="ooo">
+<p class="hide">
+5 loads
+</p>
+<p class="show">
+<a href="#?w=500" rel="bad" class="poplight">135 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="ooo">
+<p class="hide">
+6 loads
+</p>
+<p class="show">
+<a href="#?w=500" rel="bad" class="poplight">162 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="ooo">
+<p class="hide">
+7 loads
+</p>
+<p class="show">
+<a href="#?w=500" rel="bad" class="poplight">189 gallons</a>
+</p>
+</td>
+</th>
+</table>
+
+<table>
+<th>
+<td>
+<div class="questionsb">
+</div>
+<br/>
+</td>
+</th>
+<th>
+<td class="o">
+<p class="hide">
+regular washer
+</p>
+<p class="show">
+43 gpl
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="oo">
+<p class="hide">
+1 load
+</p>
+<p class="show">
+<a href="#?w=500" rel="good" class="poplight">43 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="ooo">
+<p class="hide">
+2 loads
+</p>
+<p class="show">
+<a href="#?w=500" rel="bad" class="poplight">86 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="ooo">
+<p class="hide">
+3 loads
+</p>
+<p class="show">
+<a href="#?w=500" rel="bad" class="poplight">129 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="ooo">
+<p class="hide">
+4 loads
+</p>
+<p class="show">
+<a href="#?w=500" rel="bad" class="poplight">172 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="ooo">
+<p class="hide">
+5 loads
+</p>
+<p class="show">
+<a href="#?w=500" rel="bad" class="poplight">215 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="ooo">
+<p class="hide">
+6 loads
+</p>
+<p class="show">
+<a href="#?w=500" rel="bad" class="poplight">258 gallons</a>
+</p>
+</td>
+<td class="bo">
+</td>
+<td class="ooo">
+<p class="hide">
+7 loads
+</p>
+<p class="show">
+<a href="#?w=500" rel="bad" class="poplight">301 gallons</a>
+</p>
+</td>
+</th>
+</table>
+
+<table class="wt">
+<tr class="wr">
+<td class="boxs">
+<h1> TIPS: </h1>
+</td>
+<td class="boxs">
+<p class="hide">
+<img height="65px" src="https://raw.githubusercontent.com/monicaalee/ep/gh-pages/images/washer.png">
+</p>
+<p class="show">
+Only wash full loads of clothes.</p>
+</td>
+<td class="boxs">
+<p class="hide">
+<img height="65px" src="https://raw.githubusercontent.com/monicaalee/ep/gh-pages/images/laundry.png">
+</p>
+<p class="show">
+Only wash things when they need to be washed. 
+</p>
+</td>
+</tr>
+</table>
+
+<br/><br/>
+
+<!-- section six -->
+<div class="questionsb">
+<span class="questions">
+So why should you reduce your water usage?
+</span>
+</div>
+
+<br/><br/>
+
+<table class="wt">
+<tr class="wr">
+<td class="boxs">
+<h1> FACTS: </h1>
+</td>
+<td class="boxs">
+<p class="hide">
+<img height="65px" src="https://raw.githubusercontent.com/monicaalee/ep/gh-pages/images/clock.png">
+</p>
+<p class="show">
+<a href="http://water.org/water-crisis/water-facts/children/" target="_blank"> Every minute a child dies of a water-related disease. </a>
+</p>
+</td>
+<td class="boxs">
+<p class="hide">
+<img height="65px" src="https://raw.githubusercontent.com/monicaalee/ep/gh-pages/images/bucket%20icon.png">
+</p>
+<p class="show">
+<a href="http://water.org/water-crisis/water-facts/women/" target="_blank"> Woman and children spend 200 million hours a day collecting water. </a>
+</p>
+</td>
+<td class="boxs">
+<p class="hide">
+<img height="65px" src="https://raw.githubusercontent.com/monicaalee/ep/gh-pages/images/sink.png">
+</p>
+<p class="show">
+<a href="http://water.org/water-crisis/water-facts/water/" target="_blank"> 1 out of 9 people lack access to safe water. </a>
+</p>
+</td>
+<td class="boxs">
+<p class="hide">
+<img height="65px" src="https://raw.githubusercontent.com/monicaalee/ep/gh-pages/images/toilet%20icon.png">
+</p>
+<p class="show">
+<a href="http://water.org/water-crisis/water-facts/sanitation/" target="_blank"> There are more mobile phones than toilets in the world. </a>
+</p>
+</td>
+<td class="boxs">
+<p class="hide">
+<img height="65px" src="https://raw.githubusercontent.com/monicaalee/ep/gh-pages/images/washing%20hands.png">
+</p>
+<p class="show">
+<a href="http://water.org/water-crisis/water-facts/economics/" target="_blank"> For every $1 spent on water and sanitation, there's a $4 economic return. </a>
+</p>
+</td>
+</tr>
+</table>
+
+<br/><br/>
+
+<!-- section seven -->
+<div class="questionsb">
+<span class="questions">
+Here are some other ways to help out:
+</span>
+</div>
+
+<br/><br/>
+
+<table class="wt">
+<tr class="wr">
+<td class="boxs">
+<p class="hide">
+TAKE THE 4 LITERS CHALLENGE
+</p>
+<p class="show">
+<a href="https://www.4liters.org/" target="_blank"> For 24 hours, use just four liters of water for everything you do. </a>
+</p>
+</td>
+<td class="boxs">
+<p class="hide">
+TAKE THE WATER CHALLENGE
+</p>
+<p class="show">
+<a href="http://thewaterproject.org/thewaterchallenge" target="_blank"> Give up paying for drinks and get water for a week, then donate the money you've saved. </a>
+</p>
+</td>
+<td class="boxs">
+<p class="hide">
+DON'T DO THE ICE BUCKET CHALLENGE or waste water
+</p>
+<p class="show">
+or at least use ocean water and shower water
+</p>
+</td>
+<td class="boxs">
+<p class="hide">
+DONATE TO ANY WATER CHARITY / ORGANIZATION</p>
+<p class="show">
+<a href="http://www.charitywater.org/" target="_blank"> charity: water </a>
+<br/>
+<a href="http://water.org/" target="_blank"> water.org </a>
+<br/>
+<a href="http://www.wateraid.org/us" target="_blank"> Water Aid </a>
+</p>
+</td>
+</tr>
+</table>
+
+<div style="background: transparent; height: 70px;">
+   
+</div>
+
+<!-- section end -->
+</div>
+
+<!-- credit -->
+
+<div id="credit">
+<a href="#?w=400" rel="credits" class="poplight" title="credits">©</a>
+</div>
+
+</body>
+
+<div id="good" class="popup" style="text-align: center; background: transparent; border: none; color: forestgreen; font-size: 21px;">
+<center>
+<table style="text-align: center; padding: 10px;">
+<th>
+<td>
+<img src="https://raw.githubusercontent.com/monicaalee/ep/gh-pages/images/check.png" width="30px" height="30px">
+</td>
+<td style="width: 1px;">
+</td>
+<td>
+You're good to go to the next question!
+</td>
+</th>
+</table>
+</center>
+</div>
+
+<div id="bad" class="popup" style="text-align: center; background: transparent; border: none; color: darkred; font-size: 21px;">
+<center>
+<table style="text-align: center; padding: 10px;">
+<th>
+<td>
+<img src="https://raw.githubusercontent.com/monicaalee/ep/gh-pages/images/error.png" width="30px" height="30px">
+</td>
+<td style="width: 1px;">
+</td>
+<td>
+Read the tips and reduce your footprint!
+</td>
+</th>
+</table>
+</center>
+</div>
+
+<div id="credits" class="popup" style="padding: 30px;">
+BACKGROUND IMAGE:<br/>
+<a href="https://www.flickr.com/photos/webtreatsetc/4967815383" target="_blank">  webtreats Tileable Deep Water Blues 6 </a>
+by
+<a href="https://www.flickr.com/photos/webtreatsetc/" target="_blank"> webstreats </a>
+<br/><br/>
+FONTS:<br/>
+<a href="http://www.google.com/fonts/specimen/Open+Sans" target="_blank"> Open Sans</a>
+by
+<a href="https://profiles.google.com/107777320916704234605/about" target="_blank"> Steve Matteson </a>
+<br/>
+<a href="http://www.dafont.com/richmond.font" target="_blank"> Richmond </a>
+by
+<a href="http://www.dafont.com/saji-johnny-kundukulam.d2808" target="_blank"> Saji Johnny Kundukulam </a>
+<br/><br/>
+SYMBOLS:
+<br/>
+<a href="http://thenounproject.com/term/bucket/2142/" target="_blank">  Bucket </a>
+by
+<a href="http://thenounproject.com/anandgrafiti/" target="_blank"> Anand A Nair </a>
+<br/>
+<a href="http://thenounproject.com/term/plant/32068/" target="_blank">  Plant </a>
+by
+<a href="http://thenounproject.com/mckowncr/" target="_blank"> Cassie McKown </a>
+<br/>
+<a href="http://thenounproject.com/term/music/3191/" target="_blank">  Music </a>
+by
+<a href="http://thenounproject.com/ChrisHolm/" target="_blank"> Christopher Holm-Hansen </a>
+<br/>
+<a href="http://thenounproject.com/term/alarm/44645/" target="_blank">  Alarm </a>
+by
+<a href="http://thenounproject.com/calpoog/" target="_blank"> Calvin Goodman </a>
+<br/>
+<a href="http://thenounproject.com/term/sun/68910/" target="_blank">  Sun </a>
+by
+<a href="http://thenounproject.com/imicons/" target="_blank"> iconsmind.com </a>
+<br/>
+<a href="http://thenounproject.com/term/wake-up/55411/" target="_blank">  Wake-Up </a>
+by
+<a href="http://thenounproject.com/Luis/" target="_blank"> Luis Prado </a>
+<br/>
+<a href="http://thenounproject.com/term/shaving-cream/55475/" target="_blank">  Shaving-Cream </a>
+by
+<a href="http://thenounproject.com/samuelmiller/" target="_blank"> Samuel Miller </a>
+<br/>
+<a href="http://thenounproject.com/term/razor/9319/" target="_blank"> Razor </a>
+by
+<a href="http://thenounproject.com/iconoci/" target="_blank"> iconoci </a>
+<br/>
+<a href="http://thenounproject.com/term/cat/1836/" target="_blank"> Cat </a>
+by
+<a href="http://thenounproject.com/lap819/" target="_blank"> Lucie Parker </a>
+<br/>
+<a href="http://thenounproject.com/term/dog/364/" target="_blank"> Dog </a>
+(Public Domain)
+<br/>
+<a href="http://thenounproject.com/term/brick-wall/15608/" target="_blank"> Brick-Wall </a>
+by
+<a href="http://thenounproject.com/emhaasch/" target="_blank"> Emily Haasch </a>
+<br/>
+<a href="http://thenounproject.com/term/toilet/3121/" target="_blank"> Toilet </a>
+by
+<a href="http://thenounproject.com/matthewwadedavis/" target="_blank"> Matthew Davis </a>
+<br/>
+<a href="http://thenounproject.com/term/toilet-paper/21239/" target="_blank"> Toilet-Paper</a>
+by
+<a href="http://thenounproject.com/Intro/" target="_blank"> Collectif Intro </a>
+<br/>
+<a href="http://thenounproject.com/term/brushing-teeth/58802/" target="_blank"> Brushing-Teeth </a>
+by
+<a href="http://thenounproject.com/hivernoir/" target="_blank"> Claire Jones </a>
+<br/>
+<a href="http://thenounproject.com/term/hand-wash/3497/" target="_blank"> Hand-Wash </a>
+by
+<a href="http://thenounproject.com/katiewestbrook/" target="_blank"> Katie Westbrook </a>
+<br/>
+<a href="http://thenounproject.com/term/faucet/2133/" target="_blank"> Faucet </a>
+by
+<a href="http://thenounproject.com/KenVonAlt/" target="_blank"> Kenneth Von Alt </a>
+<br/>
+<a href="http://thenounproject.com/term/check/45889/" target="_blank"> Check </a>
+by
+<a href="http://thenounproject.com/useiconic.com/" target="_blank"> useiconic.com </a>
+<br/>
+<a href="http://thenounproject.com/term/dishwasher/10738/" target="_blank"> Dishwasher </a>
+by
+<a href="http://thenounproject.com/waymanate/" target="_blank"> Nathan Thompson </a>
+<br/>
+<a href="http://thenounproject.com/term/dishes/20590/" target="_blank"> Dishes </a>
+by
+<a href="http://thenounproject.com/MWLiJC/" target="_blank"> Missionswerk </a>
+<br/>
+<a href="http://thenounproject.com/term/washing-machine/26128/" target="_blank"> Washing-Machine </a>
+by
+<a href="http://thenounproject.com/megan.sheehan/" target="_blank"> Megan Sheehan</a>
+<br/>
+<a href="http://thenounproject.com/term/laundry/28865/" target="_blank"> Laundry </a>
+by
+<a href="http://thenounproject.com/yalanis/" target="_blank"> Yazmin Alanis </a>
+<br/>
+<a href="http://thenounproject.com/term/clock/8931/" target="_blank"> Clock </a>
+by
+<a href="http://thenounproject.com/crisdobbins/" target="_blank"> Cris Dobbins </a>
+<br/><br/>
+STATISTICS:
+<br/>
+<a href="http://www.swfwmd.state.fl.us/conservation/thepowerof10/" target="_blank"> Water Use Calculator</a>
+by
+<a href="http://www.swfwmd.state.fl.us/" target="_blank"> Southwest Florida Water Management District </a>
+<br/>
+<a href="http://water.usgs.gov/edu/sc4.html" target="_blank"> Drip Calculator </a>
+by
+<a href="http://water.usgs.gov/edu/" target="_blank"> The USGS Water Science School </a>
+<br/><br/>
+CALCULATOR:
+<br/>
+<a href="http://codepen.io/josemc/pen/JoKOZm" target="_blank"> Simple Calculator </a>
+by
+<a href="http://codepen.io/josemc" target="_blank"> José Carneiro </a>
+</div>
+
+</html>
