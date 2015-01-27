@@ -59,6 +59,22 @@ height: 10px;
 width: 13px;
 }
 
+/* tooltips */
+#s-m-t-tooltip {
+max-width: 300px;
+padding: 3.5px;
+margin: 15px 0px 0px 15px;
+background: white;
+border: 1px double black;
+border-radius: 0px;
+font-family: 'Raleway', sans-serif;
+font-size: 12px;
+letter-spacing: 0px;
+text-transform: lowercase;
+color: black;
+z-index: 9999999999;
+}
+
 .header {
 background: white;
 font-size: 17px;
@@ -665,6 +681,22 @@ left: 0px;
 }
 
 </style>
+
+<!-- tooltips -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<script src="http://static.tumblr.com/iuw14ew/VSQma1786/jquery.style-my-tooltips.js"></script>
+<script>
+(function($){
+$(document).ready(function(){
+$("a[title]").style_my_tooltips({
+tip_follows_cursor:true,
+tip_delay_time:65,
+tip_fade_speed:350,
+attribute:"title"
+});
+});
+})(jQuery);
+</script>
 
 <!-- popups -->
 <script type="text/javascript" 

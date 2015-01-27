@@ -12,39 +12,6 @@
 <!-- title -->
 <title>green is the new black</title>
 
-<!-- popups -->
-<script type="text/javascript" 
-src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script> 
-<script> 
-$(document).ready(function() { 
-// 
-$('a.poplight[href^=#]').click(function() { 
-var popID = $(this).attr('rel'); //Get Popup Name 
-var popURL = $(this).attr('href'); //Get Popup href to define size 
-var query= popURL.split('?'); 
-var dim= query[1].split('&'); 
-var popWidth = dim[0].split('=')[1]; //Gets the first query string value 
-$('#' + popID).fadeIn().css({ 'width': Number( popWidth ) }).prepend('<a href="#" class="close"><img src="https://31.media.tumblr.com/351314c54892e9bebbd2b6dabcaefcef/tumblr_inline_n3xpoxUgxH1qgm03k.png" class="close_btn" title="Close" alt="Close" /></a>'); 
-var popMargTop = ($('#' + popID).height() + 80) / 2; 
-var popMargLeft = ($('#' + popID).width() + 80) / 2; 
-//Apply Margin to Popup 
-$('#' + popID).css({ 
-'margin-top' : -popMargTop,
-'margin-left' : -popMargLeft 
-}); 
-$('body').append('<div id="popupback"></div>');
-$('#popupback').css({'filter' : 'alpha(opacity=80)'}).fadeIn(); //Fade in the fade layer - .css({'filter' : 'alpha(opacity=80)'}) 
-return false; 
-}); 
-$('a.close, #popupback').live('click', function() { 
-$('#popupback , .popup').fadeOut(function() { 
-$('#popupback, a.close').remove(); //fade them both out 
-}); 
-return false; 
-}); 
-}); 
-</script>
-
 <style type="text/css">
 
 body {
@@ -75,6 +42,22 @@ background: transparent;
 ::selection {
 color: black;
 background: transparent;
+}
+
+/* tooltips */
+#s-m-t-tooltip {
+max-width: 300px;
+padding: 3.5px;
+margin: 15px 0px 0px 15px;
+background: white;
+border: 1px double black;
+border-radius: 0px;
+font-family: 'Raleway', sans-serif;
+font-size: 12px;
+letter-spacing: 0px;
+text-transform: lowercase;
+color: black;
+z-index: 9999999999;
 }
 
 /* scrollbar */
@@ -698,6 +681,55 @@ left: 0px;
 }
 
 </style>
+
+<!-- tooltips -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<script src="http://static.tumblr.com/iuw14ew/VSQma1786/jquery.style-my-tooltips.js"></script>
+<script>
+(function($){
+$(document).ready(function(){
+$("a[title]").style_my_tooltips({
+tip_follows_cursor:true,
+tip_delay_time:65,
+tip_fade_speed:350,
+attribute:"title"
+});
+});
+})(jQuery);
+</script>
+
+<!-- popups -->
+<script type="text/javascript" 
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script> 
+<script> 
+$(document).ready(function() { 
+// 
+$('a.poplight[href^=#]').click(function() { 
+var popID = $(this).attr('rel'); //Get Popup Name 
+var popURL = $(this).attr('href'); //Get Popup href to define size 
+var query= popURL.split('?'); 
+var dim= query[1].split('&'); 
+var popWidth = dim[0].split('=')[1]; //Gets the first query string value 
+$('#' + popID).fadeIn().css({ 'width': Number( popWidth ) }).prepend('<a href="#" class="close"><img src="https://31.media.tumblr.com/351314c54892e9bebbd2b6dabcaefcef/tumblr_inline_n3xpoxUgxH1qgm03k.png" class="close_btn" title="Close" alt="Close" /></a>'); 
+var popMargTop = ($('#' + popID).height() + 80) / 2; 
+var popMargLeft = ($('#' + popID).width() + 80) / 2; 
+//Apply Margin to Popup 
+$('#' + popID).css({ 
+'margin-top' : -popMargTop,
+'margin-left' : -popMargLeft 
+}); 
+$('body').append('<div id="popupback"></div>');
+$('#popupback').css({'filter' : 'alpha(opacity=80)'}).fadeIn(); //Fade in the fade layer - .css({'filter' : 'alpha(opacity=80)'}) 
+return false; 
+}); 
+$('a.close, #popupback').live('click', function() { 
+$('#popupback , .popup').fadeOut(function() { 
+$('#popupback, a.close').remove(); //fade them both out 
+}); 
+return false; 
+}); 
+}); 
+</script>
 
 </head>
 
