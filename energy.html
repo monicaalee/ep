@@ -485,7 +485,6 @@ position: absolute;
 z-index: 999999;
 height: 30px;
 width: 30px;
-display: none;
 }
 
 *html .popup {
@@ -710,7 +709,7 @@ var popURL = $(this).attr('href'); //Get Popup href to define size
 var query= popURL.split('?'); 
 var dim= query[1].split('&'); 
 var popWidth = dim[0].split('=')[1]; //Gets the first query string value 
-$('#' + popID).fadeIn().css({ 'width': Number( popWidth ) }).prepend('<a href="#" class="close"><img src="https://31.media.tumblr.com/351314c54892e9bebbd2b6dabcaefcef/tumblr_inline_n3xpoxUgxH1qgm03k.png" class="close_btn" title="Close" alt="Close" /></a>'); 
+$('#' + popID).fadeIn().css({ 'width': Number( popWidth ) }).prepend('<a href="#" class="close"><img src="" class="close_btn" title="Close" alt="Close" /></a>'); 
 var popMargTop = ($('#' + popID).height() + 80) / 2; 
 var popMargLeft = ($('#' + popID).width() + 80) / 2; 
 //Apply Margin to Popup 
