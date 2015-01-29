@@ -476,13 +476,11 @@ color: black;
 text-decoration: underline;
 }
 
-.btn_close img {
+.btn_close {
 border: none;
 float: right;
-height: 21px;
 margin: -15px -15px 0 0;
-position: fixed;
-width: 21px;
+position: absolute;
 z-index: 999999;
 }
 
@@ -708,7 +706,7 @@ var popURL = $(this).attr('href'); //Get Popup href to define size
 var query= popURL.split('?'); 
 var dim= query[1].split('&'); 
 var popWidth = dim[0].split('=')[1]; //Gets the first query string value 
-$('#' + popID).fadeIn().css({ 'width': Number( popWidth ) }).prepend('<a href="#" class="close"><img src="https://raw.githubusercontent.com/monicaalee/ep/gh-pages/images/close.png" class="close_btn" title="Close" alt="Close" /></a>'); 
+$('#' + popID).fadeIn().css({ 'width': Number( popWidth ) }).prepend('<a href="#" class="close"><img src="https://raw.githubusercontent.com/monicaalee/ep/gh-pages/images/close.png" class="close_btn" width="21px" height="21px" title="Close" alt="Close" /></a>'); 
 var popMargTop = ($('#' + popID).height() + 80) / 2; 
 var popMargLeft = ($('#' + popID).width() + 80) / 2; 
 //Apply Margin to Popup 
