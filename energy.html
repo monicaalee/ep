@@ -479,10 +479,10 @@ text-decoration: underline;
 img.close_btn {
 float: right;
 right: 0px;
-top: 0px;
-margin: 0px;
+top: 10px;
+margin: 10px;
 border: none;
-position: absolute;
+position: fixed;
 z-index: 999999;
 height: 1px;
 width: 1px;
@@ -710,7 +710,7 @@ var popURL = $(this).attr('href'); //Get Popup href to define size
 var query= popURL.split('?'); 
 var dim= query[1].split('&'); 
 var popWidth = dim[0].split('=')[1]; //Gets the first query string value 
-$('#' + popID).fadeIn().css({ 'width': Number( popWidth ) }).prepend('<a href="#" class="close"><img src="https://raw.githubusercontent.com/monicaalee/ep/gh-pages/images/error.png" class="close_btn" title="Close" alt="Close" /></a>'); 
+$('#' + popID).fadeIn().css({ 'width': Number( popWidth ) }).prepend('<a href="#" class="close"><img src="https://raw.githubusercontent.com/monicaalee/ep/gh-pages/images/close.png" class="close_btn" title="Close" alt="Close" /></a>'); 
 var popMargTop = ($('#' + popID).height() + 80) / 2; 
 var popMargLeft = ($('#' + popID).width() + 80) / 2; 
 //Apply Margin to Popup 
@@ -2302,7 +2302,7 @@ DONATE TO ANY WATER CHARITY / ORGANIZATION</p>
 <table style="text-align: center; padding: 10px;">
 <th>
 <td>
-<a href="#" class="close"><img src="https://raw.githubusercontent.com/monicaalee/ep/gh-pages/images/check.png" width="30px" height="30px" title="click around the edges to move on"></a>
+<img src="https://raw.githubusercontent.com/monicaalee/ep/gh-pages/images/check.png" width="30px" height="30px" title="click around the edges to move on">
 </td>
 <td style="width: 1px;">
 </td>
@@ -2319,7 +2319,7 @@ DONATE TO ANY WATER CHARITY / ORGANIZATION</p>
 <table style="text-align: center; padding: 10px;">
 <th>
 <td>
-<a href="#" class="close"><img src="https://raw.githubusercontent.com/monicaalee/ep/gh-pages/images/error.png" width="30px" height="30px" title="click around the edges to move on"></a>
+<img src="https://raw.githubusercontent.com/monicaalee/ep/gh-pages/images/error.png" width="30px" height="30px" title="click around the edges to move on">
 </td>
 <td style="width: 1px;">
 </td>
